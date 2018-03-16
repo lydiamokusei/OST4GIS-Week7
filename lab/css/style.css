@@ -31,4 +31,91 @@ p.main {
   position: absolute;
   background-color: #fff;
   z-index: 2000;
+  left: 470px;
+  top:15px;
+}
+.legendText {
+  position: absolute;
+  z-index: 2000;
+  left: 500px;
+  top:15px;
+}
+#MON {
+  width:20px;
+  height:20px;
+  background-color: #4DB6AC;
+  border: 4px solid #00838F;
+  left: 460px;
+  top: 0px;
+}
+
+#MONtext {
+  width:60px;
+  height:20px;
+  left: 540px;
+  top: 0px;
+}
+
+#TUE {
+  width:20px;
+  height:20px;
+  background-color: #FFFF66;
+  border: 4px solid #FFEB3B;
+  left: 460px;
+  top: 0px;
+}
+
+#TUEtext {
+  width:60px;
+  height:20px;
+  left: 540px;
+  top: 0px;
+}
+
+#WED {
+  width:20px;
+  height:20px;
+  background-color: #EF5350;
+  border: 4px solid #D32F2F;
+  left: 460px;
+  top: 0px;
+}
+
+#WEDtext {
+  width:60px;
+  height:20px;
+  left: 540px;
+  top: 0px;
+}
+
+#THU {
+  width:20px;
+  height:20px;
+  background-color: #BA68C8;
+  border: 4px solid #8E24AA;
+  left: 460px;
+  top: 0px;
+}
+
+#THUtext {
+  width:60px;
+  height:20px;
+  left: 540px;
+  top: 0px;
+}
+
+#FRI {
+  width:20px;
+  height:20px;
+  background-color: #66BB6A;
+  border: 4px solid #388E3C;
+  left: 460px;
+  top: 0px;
+}
+
+#FRItext {
+  width:60px;
+  height:20px;
+  left: 540px;
+  top: 0px;
 }

@@ -125,11 +125,36 @@ of the application to report this information.
 
 ===================== */
 
-var dataset = ""
+var dataset = "https://raw.githubusercontent.com/CPLN-692-401/datasets/master/geojson/philadelphia-garbage-collection-boundaries.geojson";
 var featureGroup;
 
+
 var myStyle = function(feature) {
-  return {};
+
+  switch(feature.properties.COLLDAY){
+
+    case 'MON': return {fillColor: "teal",
+                        color: "teal",
+                        fillOpacity:0.5};
+
+    case 'TUE': return {fillColor: "yellow",
+                        color: "yellow",
+                        fillOpacity:0.5};
+
+    case 'WED': return {fillColor: "red",
+                        color: "red",
+                        fillOpacity:0.5};
+
+    case 'THU': return {fillColor: "purple",
+                        color: "purple",
+                        fillOpacity:0.5};
+
+    case 'FRI': return {fillColor: "green",
+                        color: "green",
+                        fillOpacity:0.5};
+
+  }
+
 };
 
 var showResults = function() {
@@ -153,13 +178,30 @@ var eachFeatureFunction = function(layer) {
     Check out layer.feature to see some useful data about the layer that
     you can use in your application.
     ===================== */
+    switch (layer.feature.properties.COLLDAY) {
+        case 'MON': $('.day-of-week').text("Monday");
+        break;
+        case 'TUE': $('.day-of-week').text("Tuesday");
+        break;
+        case 'WED': $('.day-of-week').text("Wednesday");
+        break;
+        case 'THU': $('.day-of-week').text("Thursday");
+        break;
+        case 'FRI': $('.day-of-week').text("Friday");
+        break;
+    }
     console.log(layer.feature);
     showResults();
   });
 };
 
+//filter out the junk data
 var myFilter = function(feature) {
-  return true;
+  if(feature.properties.COLLDAY !== " "){
+    return true;
+  }else{
+    return false;
+  }
 };
 
 $(document).ready(function() {
